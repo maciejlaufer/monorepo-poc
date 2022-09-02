@@ -2,17 +2,22 @@
   "name": "module1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "prebuild": "cd ../shared1 && npm run build && cd ../module1 && npm install",
     "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^4.17.13",
     "typescript": "^4.8.2"
   },
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "shared1": "file:../shared1"
   }
 }

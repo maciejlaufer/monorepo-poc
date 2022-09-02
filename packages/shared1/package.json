@@ -2,13 +2,23 @@
   "name": "shared1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "typings": "index",
   "scripts": {
+    "build": "tsc",
+    "prebuild": "npm install",
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^18.7.14",
+    "@types/ramda": "^0.28.15",
     "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "node": "^16.17.0",
+    "ramda": "^0.28.0"
   }
 }
